@@ -98,7 +98,7 @@ VMProtect에서는 `Add Function` 버튼으로 `helloWorld` 함수를 지정합�
 하지만 VMProtect로 보호된 실행 파일은 함수 이름이 모두 사라지고, 코드 내부에서도 helloWorld() 같은 함수 호출이 직접적인 방식이 아닌 간접 호출로 바뀌게 됩니다.
 예를 들어, 함수 주소를 미리 계산해놓고 나중에 실행 중에만 호출하도록 처리하거나, 가상 머신 위에서 명령어처럼 해석되도록 바뀝니다. 이로 인해 정적 분석이 훨씬 더 어려워집니다.
 
-예를 들어 `__imp_printf`는 External Symbol로 존재하며, 이는 IAT 기반으로 외부 함수 주소를 참조하는 구조입니다. 그러나 VMProtect가 적용되면 함수 포인터만 남습니다.
+예를 들어 `__imp_printf`는 Import Symbol로 존재하며, 이는 IAT 기반으로 외부 함수 주소를 참조하는 구조입니다. 그러나 VMProtect가 적용되면 함수 포인터만 남습니다.
 
 ![image.png](/assets/img/Anti_Reverse_Engineering_Analysis/4.png)
 
